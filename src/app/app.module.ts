@@ -7,7 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
-import { ProfileComponent } from './profile/profile.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { DatabindingComponent } from './databinding/databinding.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { RectangleComponent } from './rectangle/rectangle.component';
+import { CircleComponent } from './circle/circle.component';
+import { BmiComponent } from './bmi/bmi.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +22,12 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     DashboardComponent,
     ErrorComponent,
-    ProfileComponent
+    WelcomeComponent,
+    DatabindingComponent,
+    CalculatorComponent,
+    RectangleComponent,
+    CircleComponent,
+    BmiComponent,
   ],
   imports: [
     BrowserModule,

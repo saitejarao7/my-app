@@ -2,15 +2,35 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    overflow: auto;
 }
 .left{
     width: 20%;
     height:100%;
     background-color: black;
     color: white;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-between; */
+    text-align: center;
+    line-height: 500%;
 }
 .right{
+    margin: 0;
     width: 80%;
     height: 100%;
     background-color: aquamarine;
+    background-size: cover;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
+
+button{
+    width: 80%;
+    height: 5%;
+    background-color: red;
+    color: white;
+    border-radius: 7px;   
+}
+
