@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./rectangle.component.css']
 })
 export class RectangleComponent {
-
+  num1:number=0;
+  num2:number=0;
+  result:number=0;
+  
+  area(){
+    this.result=this.num1*this.num2;
+  }
+  perimeter(){
+    this.result=this.num1*this.num2;
+  }
 }

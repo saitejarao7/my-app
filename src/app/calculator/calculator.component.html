@@ -1,16 +1,16 @@
 <div class="right">
     <div class="calculator">
         <label><h3>Number 1:</h3></label><br>
-        <input type="number"><br>
+        <input type="number" [(ngModel)]="num1"><br>
         <label><h3>Number 2:</h3></label><br>
-        <input type="number"><br>
+        <input type="number" [(ngModel)]="num2"><br>
         <div class="buttons">
-        <button>Sum</button>
-        <button>Sub</button>
-        <button>Mul</button>
-        <button>Div</button>
+        <button (click)="sum()">Sum</button>
+        <button (click)="sub()">Sub</button>
+        <button (click)="mul()">Mul</button>
+        <button (click)="div()">Div</button>
     </div><br>
-    <h2>Result</h2>
+    <h2>Result:{{result}}</h2>
     </div>
 
 </div>

@@ -1,0 +1,47 @@
+
+<h1>Employee Data</h1>
+
+<label>Name:</label>
+<input type="text" [(ngModel)]='name'> <br>
+<label>Experience:</label>
+<input type="number" [(ngModel)]='experience'> <br>
+<label>Package:</label>
+<input type="number" [(ngModel)]='package'> <br>
+<label>Role:</label>
+<input type="text" [(ngModel)]='role'> <br>
+<button (click)="add()">Add Employee</button>
+
+<button class="btn btn-warning" (click)="bonus()">Add 30K Bonus</button>
+<button class="btn btn-warning" (click)="costToComapny()">Cost to Company</button>
+<button (click)="packageHighToLow()"> Package High to Low</button>
+
+<select [(ngModel)]="role" (change)="rolefilter()">
+    <option value="UIDeveloper"> UI Developer</option>
+    <option value="Software Developer"> Software Devloper</option>
+    <option value="Data Engineer"> Data Enginner</option>
+    <option value="Testing Enginner"> Testing Engineer</option>
+</select>
+
+<input type="text" placeholder="Enter text to search" [(ngModel)]="term" (keyup)="search()">
+
+<table border="1" class="table table-dark">
+    <thead>
+     
+        <tr>
+            <th>name</th>
+            <th>experience</th>
+            <th>package</th>
+            <th>role</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees, let i=index" >
+            <td>{{employee.name}}</td>
+            <td>{{employee.experience}}</td>
+            <td>{{employee.package}}</td>
+            <td>{{employee.role}}</td>
+            <td><button (click)="delete(i)"> Delete</button></td>
+        </tr>
+    </tbody>
+</table>

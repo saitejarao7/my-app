@@ -1,0 +1,13 @@
+<div class="right">
+<div *ngFor="let flip of flipkart, let i=index" class="card" style="width: 275px; height:400px;">
+  <div class="img">  <img src={{flip.image}} class="card-img-top" alt="image">
+   <div class="rating">{{flip.rating.rate}}</div>
+</div>
+  <div class="card-body">
+    <h5 class="card-title">{{flip.category}}</h5>
+    <p class="card-text">{{flip.title}}</p>
+    <p class="card-price" style="color: red;">Rs.{{flip.price}}</p>
+  </div>
+    
+</div>
+</div>
