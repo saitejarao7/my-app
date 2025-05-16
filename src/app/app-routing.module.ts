@@ -15,6 +15,9 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentCardComponent } from './student-card/student-card.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -31,7 +34,10 @@ const routes: Routes = [
     {path:'vehicles',component:VehiclesComponent},
     {path:'flipkart',component:FlipkartComponent},
     {path:'mail',component:MailComponent},
-    {path:'weather',component:WeatherComponent}
+    {path:'weather',component:WeatherComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'student-card',component:StudentCardComponent},
+    {path:'student-form',component:StudentFormComponent}
     
   ]},
   {path:'**',component:ErrorComponent},

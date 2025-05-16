@@ -1,0 +1,55 @@
+/* .parent{
+    width: 100%;
+    height: 100%; 
+     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+
+} */
+.head{
+    width: 100%;
+    height: 15%;
+    background-color: lightgray;
+}
+.body{
+    width:100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+
+}
+*{
+    margin: 0;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-around;
+    background-color: blueviolet;
+
+}
+.card-body{
+    display: flex;
+}
+.data{
+    width: 70%;
+    height: 100%;
+    /* background-color: tomato; */
+}
+.image{
+    width: 40%;
+    height: 100%;
+    background-color: red;
+}
+.card-footer{
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    background-color: blue;
+    border-radius: 10%;
+}

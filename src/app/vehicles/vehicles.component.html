@@ -1,5 +1,40 @@
 
 <div>
+<input type="text" placeholder="enter text to search" [(ngModel)]="keywords" (keyup)="search()">
+
+<select [(ngModel)]="column">
+    <option value="vehicle">Vehicle Name</option>
+    <option value="color">Color</option>
+    <option value="cost">Cost</option>
+    <option value="fuel">Fuel</option>
+    <option value="tyres">Tyres</option>
+</select>
+
+<select [(ngModel)]="order">
+    <option value="asc">Ascending Order</option>
+    <option value="desc">Descending Order</option>
+</select>
+
+<button (click)="sort()">Sort</button><br>
+
+<select [(ngModel)]="limit">
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="50">50</option>
+</select>
+
+<select [(ngModel)]="page">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+</select>
+
+<button (click)="pagination()">Pagination</button>
+<button routerLink="/dashboard/create-vehicle">Create Vehicle</button>
+
 <table border="1" class="table table-dark">
     <thead>
      
@@ -9,12 +44,11 @@
             <th>Color</th>
             <th>Fuel</th>
             <th>Id</th>
-            <th>Image</th>
             <th>Manufacturer</th>
             <th>Model</th>
             <th>Type</th>
             <th>Tyres</th>
-            
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -24,11 +58,11 @@
             <td>{{vehicle.color}}</td>
             <td>{{vehicle.fuel}}</td>
             <td>{{vehicle.id}}</td>
-            <td>{{vehicle.image}}</td>
             <td>{{vehicle.manufacturer}}</td>
             <td>{{vehicle.model}}</td>
             <td>{{vehicle.type}}</td>
             <td>{{vehicle.tyres}}</td>
+            <td><button class="btn btn-danger" (click)="delete(vehicle.id)">Delete</button></td>
         </tr>
     </tbody>
 </table> 
