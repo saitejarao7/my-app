@@ -4,6 +4,7 @@
         <hr>
         <h3 routerLink="/dashboard/home">Home</h3>
         <!-- <h3 routerLink="/">Link</h3> -->
+        <h3 routerLink="login">Login</h3>
         <h3 routerLink="/dashboard/welcome">Welcome</h3>
         <h3 routerLink="/dashboard/databinding">Data Binding</h3>
         <h3 routerLink="/dashboard/calculator">Calculator</h3>
@@ -17,8 +18,10 @@
         <h3 routerLink="weather">Weather</h3>
         <!-- <h3 routerLink="create-vehicle">create-vehicle</h3> -->
          <h3 routerLink="student-card">Student Card</h3>
+         <h3 routerLink="create-user">Create User</h3>
+         <h3 routerLink="createuser-task">John</h3>
 
-        <button class="btn btn-log">Logout</button>
+        <button class="btn btn-2" (click)="logout()" >Logout</button>
     </div>
     <div class="right">
         <router-outlet></router-outlet>

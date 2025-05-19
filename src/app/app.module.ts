@@ -23,6 +23,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateuserTaskComponent } from './createuser-task/createuser-task.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { StudentFormComponent } from './student-form/student-form.component';
     CreateVehicleComponent,
     StudentCardComponent,
     StudentFormComponent,
+    CreateUserComponent,
+    CreateuserTaskComponent,
   ],
   imports: [
     BrowserModule,

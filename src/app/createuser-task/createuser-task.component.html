@@ -1,0 +1,87 @@
+<form [formGroup]="userForm">
+    <label>Name:</label>
+    <input type="text" formControlName="name"><br>
+
+     <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+        <p *ngIf="userForm.get('name')?.errors?.['required']">Name Should Required</p>
+        <p *ngIf="userForm.get('name')?.errors?.['minlength']">Name Should be minimum 6 letters</p>
+        <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Name Should be maximum 12 letters</p>
+
+    </div>
+
+    <label>Class:</label>
+    <input type="number" formControlName="class"><br>
+    <label>Father Name:</label>
+    <input type="text" formControlName="fatherName"><br>
+    <label>Email:</label>
+    <input type="email" formControlName="email"><br>
+    <label>DOB:</label>
+    <input type="date" formControlName="dob"><br>
+
+    <div formGroupName="address">
+    <label>Address Line:</label>
+    <input type="text" formControlName="addressLine"><br>
+    <label>City:</label>
+    <input type="text" formControlName="city"><br>
+    <label>State:</label>
+    <input type="text" formControlName="state"><br>
+    <div *ngIf="userForm.get('address.state')?.touched && userForm.get('address.state')?.invalid">
+        <p *ngIf="userForm.get('address.state')?.errors?.['required']">Required field</p>
+        <p *ngIf="userForm.get('address.state')?.errors?.['minlength']"> State Name Should be minimum 6 letters</p>
+        <p *ngIf="userForm.get('address.state')?.errors?.['maxlength']">State Should be maximum 12 letters</p>
+
+    </div>
+    <label>Pincode:</label>
+    <input type="number" formControlName="pin"><br> 
+    <div *ngIf="userForm.get('address.pin')?.touched && userForm.get('address.pin')?.invalid">
+        <p *ngIf="userForm.get('address.pin')?.errors?.['required']">Pin Should Required</p>
+        <p *ngIf="userForm.get('address.pin')?.errors?.['min']">Pin Should be minimum 6 numbers</p>
+        <p *ngIf="userForm.get('address.pin')?.errors?.['max']">Pin Should be maximum 6 numbers</p>
+
+    </div>
+    
+    </div>
+
+    <label>Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholor">
+    <label>Day Scholor</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>Residential</label><br>
+
+    <div *ngIf="userForm.get('type')?.value=='dayScholor'">
+        <label>Bus Fee:</label>
+        <input type="number" formControlName="busFee"><br>
+    </div>
+
+    <div *ngIf="userForm.get('type')?.value=='residential'">
+        <label>Hostel Fee:</label>
+        <input type="number" formControlName="hostelFee"><br>
+    </div>
+
+    <!-- <label></label> -->
+    <button class="btn btn-success" (click)="addMark()">Add Marks</button><br>
+
+    <div formArrayName="marks">
+        <div *ngFor="let mark of MarksFormArray.controls;let i=index">
+            <div formGroupName="{{i}}">
+                <h1>Mark{{i+1}}</h1>
+                <label>Class:</label>
+                <input type="number" formControlName="class"><br> 
+                <label>Year:</label>
+                <input type="number"formControlName="year"><br>
+                <label>Percentage:</label>
+                <input type="number" formControlName="percentage"><br>
+                <div *ngIf="userForm.get('marks.percentage')?.touched && userForm.get('marks.percentage')?.invalid">
+                    <p *ngIf="userForm.get('marks.percentage')?.errors?.['required']">Pin Should Required</p>
+                    <p *ngIf="userForm.get('marks.percentage')?.errors?.['min']">Pin Should be minimum 6 numbers</p>
+                    <p *ngIf="userForm.get('marks.percentage')?.errors?.['max']">Pin Should be maximum 6 numbers</p>
+            
+                </div>
+    
+                <button class="btn btn-danger" (click)="deleteMark(i)">Delete</button>
+            </div>
+        </div>
+    </div>    
+        <button (click)="submit()" class="btn btn-primary">submit</button>
+
+</form>
