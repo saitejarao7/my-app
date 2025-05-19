@@ -25,6 +25,8 @@ import { StudentCardComponent } from './student-card/student-card.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateuserTaskComponent } from './createuser-task/createuser-task.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { CreateuserTaskComponent } from './createuser-task/createuser-task.compo
     StudentFormComponent,
     CreateUserComponent,
     CreateuserTaskComponent,
+    VehicleDetailsComponent,
+    StudentDetailsComponent,
   ],
   imports: [
     BrowserModule,

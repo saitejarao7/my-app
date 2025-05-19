@@ -55,7 +55,7 @@
     <div class="card-footer" >
         <label>School City:{{student.school_city}}</label>
         <label>School Pin:{{student.school_pin}}</label>
-        <button>View</button>
+        <button class="btn btn-info" routerLink="/dashboard/student-details/{{student.id}}">View</button>
         <button>Edit</button>
         <button (click)="delete(student.id)">Delete</button>
     </div>

@@ -20,6 +20,8 @@ import { StudentCardComponent } from './student-card/student-card.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateuserTaskComponent } from './createuser-task/createuser-task.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 const routes: Routes = [
   
@@ -43,6 +45,8 @@ const routes: Routes = [
     {path:"create-user",component:CreateUserComponent},
     {path:"createuser-task",component:CreateuserTaskComponent},
     {path:'login',component:LoginComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'student-details/:id',component:StudentDetailsComponent},
     
   ]},
   {path:'**',component:ErrorComponent},
