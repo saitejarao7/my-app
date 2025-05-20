@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+// hide: any;
+hide:boolean=true;
+
+toogleVisibility(){
+  this.hide=!this.hide;
+}
 
  constructor(private _loginService:LoginService,private _router:Router){}
  public loginform:FormGroup=new FormGroup({

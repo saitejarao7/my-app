@@ -1,5 +1,6 @@
 <form class="'form" [formGroup]="loginform">
     <input type="text" placeholder="Enter your Email" class="input" formControlName="email">
-    <input type="password" placeholder="Enter your password" class="input" formControlName="password">
+    <input [type]="hide? 'password' :'text'"  placeholder="Enter your password" class="input" formControlName="password" > 
+    <button class="btn btn-warning" (click)="toogleVisibility()"> <i class="bi bi-eye-fill fa" [ngClass]="{'fa-eye-slash': hide, 'fa-eye':!hide}"></i> </button>
     <button (click)="login()">Login</button>
 </form>

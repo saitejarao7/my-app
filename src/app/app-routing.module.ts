@@ -47,6 +47,8 @@ const routes: Routes = [
     {path:'login',component:LoginComponent},
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path:'student-details/:id',component:StudentDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {path:'update-student/:id',component:StudentFormComponent},
     
   ]},
   {path:'**',component:ErrorComponent},
