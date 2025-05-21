@@ -22,6 +22,12 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateuserTaskComponent } from './createuser-task/createuser-task.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextAreComponent } from './text-are/text-are.component';
 
 const routes: Routes = [
   
@@ -49,6 +55,12 @@ const routes: Routes = [
     {path:'student-details/:id',component:StudentDetailsComponent},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
     {path:'update-student/:id',component:StudentFormComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'child',component:ChildComponent},
+    {path:'sibling1',component:Sibling1Component},
+    {path:'sibling2',component:Sibling2Component},
+    {path:'rating',component:RatingComponent},
+    {path:'text-are',component:TextAreComponent},
     
   ]},
   {path:'**',component:ErrorComponent},

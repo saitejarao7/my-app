@@ -27,6 +27,12 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateuserTaskComponent } from './createuser-task/createuser-task.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextAreComponent } from './text-are/text-are.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +59,12 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     CreateuserTaskComponent,
     VehicleDetailsComponent,
     StudentDetailsComponent,
+    ParentComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    RatingComponent,
+    TextAreComponent,
   ],
   imports: [
     BrowserModule,
