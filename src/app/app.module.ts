@@ -33,6 +33,8 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextAreComponent } from './text-are/text-are.component';
+import { AboutModule } from './about/about.module';
+
 
 @NgModule({
   declarations: [
@@ -65,13 +67,17 @@ import { TextAreComponent } from './text-are/text-are.component';
     Sibling2Component,
     RatingComponent,
     TextAreComponent,
+  
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
