@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { tcsMail } from '../validators';
 
 @Component({
   selector: 'app-create-user',
@@ -24,7 +25,7 @@ export class CreateUserComponent {
     public userForm:FormGroup= new FormGroup({
       name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)]),
       mobile:new FormControl(),
-      email:new FormControl(),
+      email:new FormControl('',[Validators.required,Validators.minLength(12),Validators.maxLength(20),tcsMail]),
       password:new FormControl(),
       address:new FormGroup({
         city:new FormControl(),
