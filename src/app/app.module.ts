@@ -33,6 +33,8 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextAreComponent } from './text-are/text-are.component';
+import { CapitalDirective } from './capital.directive';
+import { InrPipe } from './inr.pipe';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { TextAreComponent } from './text-are/text-are.component';
     Sibling2Component,
     RatingComponent,
     TextAreComponent,
+    CapitalDirective,
+    InrPipe,
   ],
   imports: [
     BrowserModule,
