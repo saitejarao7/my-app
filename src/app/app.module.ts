@@ -33,6 +33,8 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextAreComponent } from './text-are/text-are.component';
+import { AboutModule } from './about/about.module';
+
 import { CapitalDirective } from './capital.directive';
 import { InrPipe } from './inr.pipe';
 import { TokenInterceptor } from './token.interceptor';
@@ -76,7 +78,9 @@ import { TokenInterceptor } from './token.interceptor';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
+   
   ],
   providers: [
     {
