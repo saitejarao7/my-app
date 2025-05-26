@@ -16,7 +16,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
@@ -35,6 +35,9 @@ import { RatingComponent } from './rating/rating.component';
 import { TextAreComponent } from './text-are/text-are.component';
 import { AboutModule } from './about/about.module';
 
+import { CapitalDirective } from './capital.directive';
+import { InrPipe } from './inr.pipe';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -67,8 +70,8 @@ import { AboutModule } from './about/about.module';
     Sibling2Component,
     RatingComponent,
     TextAreComponent,
-  
-   
+    CapitalDirective,
+    InrPipe,
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,13 @@ import { AboutModule } from './about/about.module';
     AboutModule
    
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

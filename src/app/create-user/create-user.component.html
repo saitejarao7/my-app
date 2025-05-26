@@ -1,15 +1,22 @@
 <form [formGroup]="userForm">
     <label for="">Name:</label>
-    <input type="text" formControlName="name"> <br>
+    <input type="text" formControlName="name" appCapital> <br>
     <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
         <p *ngIf="userForm.get('name')?.errors?.['required']">Name is Required</p>
         <p *ngIf="userForm.get('name')?.errors?.['minlength']">Name should be minimum 6 letters</p>
         <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Name should be maximum 12 letter</p>
+        <!-- <p *ngIf="userForm.get('email')?.errors?.['tcsMail']">Only TCS mail should be entered</p> -->
     </div>
     <label for="">Mobile:</label>
     <input type="number" formControlName="mobile"> <br>
     <label for="">Email:</label>
     <input type="mail" formControlName="email"> <br>
+    <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+        <p *ngIf="userForm.get('email')?.errors?.['required']">Email is Required</p>
+        <p *ngIf="userForm.get('email')?.errors?.['minlength']">Email should be minimum 12 letters</p>
+        <p *ngIf="userForm.get('email')?.errors?.['maxlength']">Email should be maximum 20 letter</p>
+        <p *ngIf="userForm.get('email')?.errors?.['tcsMail']">Only TCS mail should be entered</p>
+    </div>
     <label for="">Password:</label>
     <input type="password" formControlName="password"> <br>
    
